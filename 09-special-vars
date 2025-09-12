@@ -1,3 +1,9 @@
 #!/bin/bash
 
 echo "All variables passed to the script: $@"
+#  Result:  sh 09-special-vars Maha 10 !
+#           All variables passed to the script: Maha 10 !
+
+echo "Number of variables passed to the script: $#"
+#  Result:  sh 09-special-vars Maha 10 !
+#           Number of variables passed to the script: 3"
