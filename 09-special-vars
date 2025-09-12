@@ -7,3 +7,11 @@ echo "All variables passed to the script: $@"
 echo "Number of variables passed to the script: $#"
 #  Result:  sh 09-special-vars Maha 10 !
 #           Number of variables passed to the script: 3"
+
+echo "To know the script name: $0"
+
+echo "To know the current working directory: $pwd"
+
+echo "To know the home user directory: $HOME"
+
+echo "PID of the script executing now: $$"
