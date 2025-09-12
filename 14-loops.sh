@@ -5,3 +5,4 @@ do
   echo $i
 done
 
+# it prits numbers from 1 to 1000
