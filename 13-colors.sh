@@ -3,7 +3,6 @@
 USERID=$(id -u)
 R="\e[31m"
 G="\e[32m"
-Y="\e[33m"
 N="\e[0m"
 
 CHECK_ROOT() {
@@ -29,7 +28,7 @@ dnf list installed git
 
 if [ $? -ne 0 ]
 then
-   echo " $Y Git is not installed, going to install it..."
+   echo "Git is not installed, going to install it..."
    dnf install git -y
    VALIDATE $? "INSTALING GIT"
 else
@@ -40,7 +39,7 @@ dnf list installed mysql
 
 if [ $? -ne 0 ]
 then
-   echo "$Y MysQL is not installed, going to install it..."
+   echo "MysQL is not installed, going to install it..."
    dnf install mysql -y
    VALIDATE $? "INSTALING MySQL"
 else
