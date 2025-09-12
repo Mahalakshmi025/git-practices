@@ -4,7 +4,7 @@
 # 0 -> success
 # 1-127 -> failure
 
-USERID=$(id-u)
+USERID=$(id -u)
 echo "$USERID"
 
 # if [ $USERID -ne 0 ]
