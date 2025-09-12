@@ -20,8 +20,9 @@ echo "To know the home user directory: $HOME"
 echo "PID of the script executing now: $$"
 # RESULT: PID of the script executing now: 1993
 
-sleep 100 &
+#sleep 100 &
 echo "PID of the last background command is: $!"
+# RESULT: PID of the last background command is: 2120
 
 
 
