@@ -9,9 +9,15 @@ echo "Number of variables passed to the script: $#"
 #           Number of variables passed to the script: 3"
 
 echo "To know the script name: $0"
+# Result: To know the script name: 09-special-vars
 
-echo "To know the current working directory: $pwd"
+echo "To know the current working directory: $PWD"
+# Result: To know the current working directory:
 
 echo "To know the home user directory: $HOME"
+#RESULT: To know the home user directory: /home/ec2-user
 
 echo "PID of the script executing now: $$"
+# RESULT: PID of the script executing now: 1993
+
+
