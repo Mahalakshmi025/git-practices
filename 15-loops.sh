@@ -26,6 +26,7 @@ VALIDATE(){
 
 CHECK_ROOT
 
+# sudo sh 15-loops.sh mysql postfix nginx
 for package in $@ #$@ refers to all arguments passed to it
 do 
   dnf list installed $package
