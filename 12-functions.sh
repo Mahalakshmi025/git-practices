@@ -8,6 +8,7 @@ then
    exit 1
 fi
 
+#This is validate function to check git installed or not
 VALIDATE(){
     if [ $1 -ne 0 ]
     then 
