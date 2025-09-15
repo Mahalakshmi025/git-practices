@@ -19,5 +19,6 @@ while IFS= read -r line #IFS, internal field seperation, empty it will ignore wh
 
 do 
  echo "Deleting line: $line"
+ rm -rf $line
 
 done <<< $FILES
