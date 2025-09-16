@@ -1,24 +1,25 @@
 #!/bin/bash
 
 SOURCE_DIR=/home/ec2-user/logs
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
+Y="\e[33m"
 
 if [ -d $SOURCE_DIR ]
-then 
-   echo -e "$SOURCE_DIR $G EXISTS $N"
+then
+    echo -e "$SOURCE_DIR $G Exists $N"
 else
-   echo -e "$SOURCE_DIR $R does not EXISTS $N"
-   exit 1
+    echo -e "$SOURCE_DIR $R does not exist $N"
+    exit 1
+fi
 
-fi 
-
-FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)
+FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime +14)
 echo "Files: $FILES"
 
-while IFS= read -r line #IFS, internal field seperation, empty it will ignore while space. 
-                        #-r is for not ignore special chars like /
-
-do 
- echo "Deleting line: $line"
- rm -rf $line
-
+# dont use line, it is reserverd word
+while IFS= read -r file #IFS,internal field seperatpor, empty it will ignore while space.-r is for not to ingore special charecters like /
+do
+    echo "Deleting file: $file"
+    rm -rf $file
 done <<< $FILES
