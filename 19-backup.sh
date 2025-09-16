@@ -39,11 +39,11 @@ echo "Files: $FILES"
 
 # if [ ! -z $FILES ] #true if FILES is empty, ! makes it expression false
 # then
-#      echo "Files are found"
-#      ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
-#      find $(SOURCE_DIR) -name
+#    echo "Files are found"
+#    ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
+#    find $(SOURCE_DIR) -name
 
-if [ -n $FILES ]
+if [ ! -z $FILES ]
 then
    echo "files r found"
 else
